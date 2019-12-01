@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.161
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "week-1", "week-1", "{E75F861A-6C60-406E-99CA-1432041B0A97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "challenge-1", "challenge-1", "{79FAD9F1-46AB-4BB9-B018-6CF4A14A3CCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge1", "week-1\challenge-1\Challenge1\Challenge1.csproj", "{6F78919A-E3EF-44AD-98D0-BBF82578BAE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{6150C74F-6F89-4D8F-ADC4-E6F579AB7E93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerlessChallenges.Web", "web\ServerlessChallenges.Web\ServerlessChallenges.Web.csproj", "{88896D4F-0FE3-4BC6-A270-94A248B1EC1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F78919A-E3EF-44AD-98D0-BBF82578BAE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F78919A-E3EF-44AD-98D0-BBF82578BAE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F78919A-E3EF-44AD-98D0-BBF82578BAE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F78919A-E3EF-44AD-98D0-BBF82578BAE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88896D4F-0FE3-4BC6-A270-94A248B1EC1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88896D4F-0FE3-4BC6-A270-94A248B1EC1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88896D4F-0FE3-4BC6-A270-94A248B1EC1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88896D4F-0FE3-4BC6-A270-94A248B1EC1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79FAD9F1-46AB-4BB9-B018-6CF4A14A3CCB} = {E75F861A-6C60-406E-99CA-1432041B0A97}
+		{6F78919A-E3EF-44AD-98D0-BBF82578BAE9} = {79FAD9F1-46AB-4BB9-B018-6CF4A14A3CCB}
+		{88896D4F-0FE3-4BC6-A270-94A248B1EC1E} = {6150C74F-6F89-4D8F-ADC4-E6F579AB7E93}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21D88595-17D3-419C-909C-9BCFD61CE606}
+	EndGlobalSection
+EndGlobal
