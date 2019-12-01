@@ -1,0 +1,53 @@
+﻿@page "/dreidel"
+@using System.Diagnostics
+@inject HttpClient Http
+
+<a href="https://github.com/microsoft/25-days-of-serverless/tree/master/week-1/challenge-1" target="_blank">https://github.com/microsoft/25-days-of-serverless/tree/master/week-1/challenge-1</a>
+<p>Create a REST API endpoint that spins a dreidel and randomly returns נ (Nun), ג (Gimmel), ה (Hay), or ש (Shin).</p>
+
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <img src="@imageUrl"/>
+    <h2>@selectedSide?.Name</h2>
+    <p>@selectedSide?.Instructions</p>
+
+    @if (!isSpinning)
+    {
+        <button @onclick="SpinDreidel"><h3>Spin!</h3></button>
+    }
+</div>
+
+@code
+{
+    private DreidelSide selectedSide;
+
+    private string imageUrl;
+
+    private bool isSpinning;
+
+    private async Task SpinDreidel()
+    {
+        isSpinning = true;
+        selectedSide = null;
+        imageUrl = "images/dreidel/spin.gif";
+
+
+        var stopwatch = Stopwatch.StartNew();
+        var newSide = await Http.GetJsonAsync<DreidelSide>("https://cloudexperiment-serverlesschallenge1.azurewebsites.net/dreidel");
+
+        if (stopwatch.ElapsedMilliseconds < 3000)
+            await Task.Delay(TimeSpan.FromMilliseconds(3000L - stopwatch.ElapsedMilliseconds));
+
+        selectedSide = newSide;
+        imageUrl = $"images/dreidel/{selectedSide.Name.ToLower()}.png";
+        isSpinning = false;
+    }
+
+    public class DreidelSide
+    {
+        public char Symbol { get; set; }
+
+        public string Name { get; set; }
+
+        public string Instructions { get; set; }
+    }
+}
